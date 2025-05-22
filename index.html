@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gentle Bite - Mini Donas Artesanales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&family=Parisienne&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-pink-50 text-gray-800">
+
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('messageModal')">&times;</span>
+            <div id="modalMessageContent" class="text-lg text-gray-700"></div>
+            <div class="text-center">
+                <button onclick="closeModal('messageModal')"
+                    class="mt-6 bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
+                    Entendido
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="menuModal" class="modal">
+        <div class="modal-content modal-content-menu">
+            <span class="modal-close" onclick="closeModal('menuModal')">&times;</span>
+            <div class="text-center mb-6">
+                <h2 class="font-script text-5xl text-pink-500">Gentle Bite</h2>
+                <h3 class="font-display text-3xl text-pink-600 mt-1">Nuestro Menú</h3>
+            </div>
+            <div class="menu-section mb-8">
+                <h3>Cajitas</h3>
+                <div class="menu-item">
+                    <span class="menu-item-name">CAJA X6</span><span class="menu-item-price">$12.000</span>
+                    <p class="menu-item-description">6 donitas, 1 topping y 1 salsa.</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">CAJA X8</span><span class="menu-item-price">$16.000</span>
+                    <p class="menu-item-description">8 donitas, 2 toppings y 1 salsa.</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">CAJA X10</span><span class="menu-item-price">$20.000</span>
+                    <p class="menu-item-description">10 donitas, 2 toppings y 2 salsas.</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">CAJA X16</span><span class="menu-item-price">$30.000</span>
+                    <p class="menu-item-description">16 donitas, 3 toppings y 3 salsas.</p>
+                </div>
+            </div>
+
+            <div class="menu-section mb-8">
+                <h3>Cajitas Personalizadas</h3>
+                <p class="text-gray-600 mb-4 text-sm">Festividades importantes (cumpleaños, Baby shower, aniversario,
+                    etc) y del color que desees.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <img src="https://i.ibb.co/C3Gfq04w/Imagen-de-Whats-App-2025-05-22-a-las-08-22-28-b8cd338c.jpg"
+                        alt="[Imagen de Caja Personalizada Feliz Cumpleaños]"
+                        class="rounded-lg shadow-md w-full object-cover aspect-[4/3]">
+                    <img src="https://i.ibb.co/67x951D5/Imagen-de-Whats-App-2025-05-22-a-las-08-22-29-5394c760.jpg"
+                        alt="[Imagen de Caja Personalizada Baby Shower]"
+                        class="rounded-lg shadow-md w-full object-cover aspect-[4/3]">
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">CAJA X6</span><span class="menu-item-price">$18.000</span>
+                    <p class="menu-item-description">6 donitas con cobertura de chocolate y temática a elección.</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">CAJA X9</span><span class="menu-item-price">$22.000</span>
+                    <p class="menu-item-description">9 donitas con cobertura de chocolate y temática a elección.</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">CAJA X16</span><span class="menu-item-price">$35.000</span>
+                    <p class="menu-item-description">16 donitas con cobertura de chocolate y temática a elección.</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">CAJA X20</span><span class="menu-item-price">$42.000</span>
+                    <p class="menu-item-description">20 donitas con cobertura de chocolate y temática a elección.</p>
+                </div>
+                <p class="text-gray-600 mt-3 text-sm">Si deseas cotizar más de 20 minidonas, escríbenos y te daremos
+                    toda la información.</p>
+            </div>
+
+            <div class="menu-section mb-8">
+                <h3>Especiales</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <img src="https://i.ibb.co/hxTGCkt3/Imagen-de-Whats-App-2025-05-22-a-las-08-23-59-f76c5c2b.jpg"
+                        alt="[Imagen de Especial Gentle Bite 1]"
+                        class="rounded-lg shadow-md w-full object-cover aspect-[4/3]">
+                    <img src="https://i.ibb.co/Kxq7Q8x8/Imagen-de-Whats-App-2025-05-22-a-las-08-24-00-0e8a5e5c.jpg"
+                        alt="[Imagen de Especial Gentle Bite 2]"
+                        class="rounded-lg shadow-md w-full object-cover aspect-[4/3]">
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">BROCHETA X3</span><span class="menu-item-price">$10.000</span>
+                    <p class="menu-item-description">3 donitas con cobertura de chocolate.</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">VASO X6</span><span class="menu-item-price">$16.000</span>
+                    <p class="menu-item-description">6 donitas con cobertura de chocolate.</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">PARA COMPARTIR X32</span><span class="menu-item-price">$62.000</span>
+                    <p class="menu-item-description">32 donitas con cobertura de chocolate en bandeja de 4 divisiones
+                        con 1 salsa.</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">ÁRMALAS TÚ X12</span><span class="menu-item-price">$24.000</span>
+                    <p class="menu-item-description">12 donitas con 1 salsa y 1 topping.</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">ÁRMALAS TÚ X18</span><span class="menu-item-price">$34.000</span>
+                    <p class="menu-item-description">18 donitas con 2 salsas y 2 toppings.</p>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h3>Elige Tus Favoritos</h3>
+                <h4 class="font-semibold text-lg text-pink-600 mt-4 mb-2">Masas:</h4>
+                <div class="menu-toppings-list">
+                    <span class="menu-topping">Vainilla</span>
+                    <span class="menu-topping">Chocolate</span>
+                </div>
+                <h4 class="font-semibold text-lg text-pink-600 mt-4 mb-2">Salsas y Coberturas:</h4>
+                <div class="menu-toppings-list">
+                    <span class="menu-topping">Arequipe</span>
+                    <span class="menu-topping">Leche condensada</span>
+                    <span class="menu-topping">Chocolate blanco</span>
+                    <span class="menu-topping">Chocolate café</span>
+                    <span class="menu-topping">Cobertura de colores</span>
+                </div>
+                <h4 class="font-semibold text-lg text-pink-600 mt-4 mb-2">Toppings:</h4>
+                <div class="menu-toppings-list">
+                    <span class="menu-topping">Lluvia de colores</span>
+                    <span class="menu-topping">Lluvia de chocolate</span>
+                    <span class="menu-topping">Maní</span>
+                    <span class="menu-topping">Coco</span>
+                    <span class="menu-topping">Chips de chocolate</span>
+                    <span class="menu-topping">Barquillos</span>
+                    <span class="menu-topping">Masmelos</span>
+                    <span class="menu-topping">Fresas</span>
+                    <span class="menu-topping">Oreo</span>
+                    <span class="menu-topping">Almendras</span>
+                    <span class="menu-topping">M&M</span>
+                    <span class="menu-topping">Arroz inflado</span>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <button onclick="closeModal('menuModal')"
+                    class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
+                    Cerrar Menú
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <img src="https://i.ibb.co/wkmgjmJ/logo.png" alt="Logo Gentle Bite" class="h-10 w-auto">
+                <span class="font-display font-bold text-pink-600 navbar-brand-text">Gentle Bite</span>
+            </a>
+
+            <div class="nav-links-container flex items-center space-x-1 xxs:space-x-2 sm:space-x-4">
+                <a href="#menu-section-display"
+                    class="text-gray-600 hover:text-pink-500 transition duration-300 nav-link-text">Nuestras Donas</a>
+                <a href="#about"
+                    class="text-gray-600 hover:text-pink-500 transition duration-300 nav-link-text">Nosotros</a>
+                <a href="#contact"
+                    class="text-gray-600 hover:text-pink-500 transition duration-300 nav-link-text">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-bg h-screen flex items-center justify-center text-white relative">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="text-center z-10 p-4">
+            <h1 class="font-display text-5xl md:text-7xl font-bold mb-2">Pequeños Bocados, Gran Felicidad</h1>
+            <p class="font-display text-2xl md:text-4xl text-pink-200 mb-6">por Gentle Bite</p>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Descubre nuestras mini donas artesanales, hechas con
+                amor y los ingredientes más frescos.</p>
+            <a href="#menu-section-display"
+                class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 shadow-lg">
+                Ver Delicias
+            </a>
+        </div>
+    </header>
+
+    <section id="menu-section-display" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-display text-4xl font-bold text-pink-600 mb-2">Nuestras Creaciones</h2>
+            <p class="text-gray-600 mb-12 text-lg">Cada mini dona es una obra de arte, perfecta para cualquier ocasión.
+            </p>
+
+            <div id="imageCarousel" class="slider-container relative w-full max-w-3xl mx-auto">
+                <div class="slider-content">
+                    <div class="slider-single">
+                        <div class="slider-single-image-container">
+                            <img class="slider-single-image" src="https://i.ibb.co/1tRTmgry/IMG-20250521-WA0032.jpg"
+                                alt="[Imagen de Mini Donas Rosas]">
+                        </div>
+                    </div>
+                    <div class="slider-single">
+                        <div class="slider-single-image-container">
+                            <img class="slider-single-image" src="https://i.ibb.co/ycHD7Hnj/IMG-20250521-WA0020.jpg"
+                                alt="[Imagen de Variedad de Mini Donas]">
+                        </div>
+                    </div>
+                    <div class="slider-single">
+                        <div class="slider-single-image-container">
+                            <img class="slider-single-image" src="https://i.ibb.co/yn9D9WxP/IMG-20250521-WA0034.jpg"
+                                alt="[Imagen de Mini Donas Chocolate y Maní]">
+                        </div>
+                    </div>
+                    <div class="slider-single">
+                        <div class="slider-single-image-container">
+                            <img class="slider-single-image" src="https://i.ibb.co/bgqyRPPD/IMG-20250521-WA0033.jpg"
+                                alt="[Imagen de Mini Donas con Chispas]">
+                        </div>
+                    </div>
+                    <div class="slider-single">
+                        <div class="slider-single-image-container">
+                            <img class="slider-single-image" src="https://i.ibb.co/wZmfDkRt/IMG-20250521-WA0026.jpg"
+                                alt="[Imagen de Caja de Mini Donas]">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button"
+                    class="absolute top-1/2 -translate-y-1/2 start-0 sm:-start-10 z-30 flex items-center justify-center h-full px-2 sm:px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-prev>
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-pink-400/60 group-hover:bg-pink-500/80 group-focus:ring-4 group-focus:ring-pink-300 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 1 1 5l4 4" />
+                        </svg>
+                        <span class="sr-only">Anterior</span>
+                    </span>
+                </button>
+                <button type="button"
+                    class="absolute top-1/2 -translate-y-1/2 end-0 sm:-end-10 z-30 flex items-center justify-center h-full px-2 sm:px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-next>
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-pink-400/60 group-hover:bg-pink-500/80 group-focus:ring-4 group-focus:ring-pink-300 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 9 4-4-4-4" />
+                        </svg>
+                        <span class="sr-only">Siguiente</span>
+                    </span>
+                </button>
+            </div>
+
+            <button onclick="openMenuModal()"
+                class="mt-12 inline-block bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 shadow-lg">
+                Ver Nuestro Menú Completo
+            </button>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-pink-50">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8"> <img src="https://i.ibb.co/rGS0K2WL/IMG-20250521-WA0025.jpg"
+                    alt="[Imagen Ilustrativa del Proceso Artesanal de Gentle Bite]"
+                    class="rounded-lg shadow-xl w-full max-w-md mx-auto md:mx-0"> </div>
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="font-display text-4xl font-bold text-pink-600 mb-4">Nuestra Historia</h2>
+                <p class="text-gray-700 text-lg mb-4 leading-relaxed">
+                    En Gentle Bite, cada mini dona es una expresión de nuestra pasión por la repostería. Nacimos del
+                    deseo de compartir pequeños momentos de alegría a través de sabores auténticos y presentaciones
+                    cuidadas. Utilizamos ingredientes de la más alta calidad y ponemos nuestro corazón en cada detalle,
+                    desde la masa hasta la decoración final.
+                </p>
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Creemos que los pequeños detalles marcan la diferencia. Por eso, nuestras mini donas no son solo un
+                    postre, son una experiencia "gentil" que deleita los sentidos y endulza la vida.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-display text-4xl font-bold text-pink-600 mb-4">¡Conéctate con Nosotros!</h2>
+            <p class="text-gray-600 mb-10 text-lg">Haz tu pedido, consulta nuestras opciones para eventos o simplemente
+                saluda. ¡Nos encantará escucharte!</p>
+
+            <div class="flex justify-center space-x-4 sm:space-x-6 mb-12">
+                <a href="https://www.instagram.com/gentle__bite/" target="_blank"
+                    class="text-pink-500 hover:text-pink-700 social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram fa-2x sm:fa-3x"></i>
+                </a>
+                <a href="https://wa.me/573021015128?text=Hola%2C%20estoy%20interesado%20en%20comprar%20minidonas"
+                    target="_blank" class="text-green-500 hover:text-green-700 social-icon" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp fa-2x sm:fa-3x"></i>
+                </a>
+            </div>
+
+            <p class="text-gray-700 text-lg mb-2">Para pedidos y consultas:</p>
+            <a href="#" onclick="showOrderInfo()" class="text-pink-600 font-semibold text-xl hover:underline">
+                Haz clic aquí para info de pedidos
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-display text-2xl mb-2">Gentle Bite</p>
+            <p>&copy; <span id="currentYear"></span> Gentle Bite. Todos los derechos reservados.</p>
+            <p class="text-sm text-gray-400 mt-2">Diseñado con <i class="fas fa-heart text-pink-500"></i> para endulzar
+                tus momentos.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="https://www.instagram.com/gentle__bite/" target="_blank"
+                    class="text-gray-400 hover:text-white social-icon" aria-label="Instagram"><i
+                        class="fab fa-instagram fa-lg"></i></a>
+                <a href="https://wa.me/573021015128?text=Hola%2C%20estoy%20interesado%20en%20comprar%20minidonas"
+                    target="_blank" class="text-gray-400 hover:text-white social-icon" aria-label="WhatsApp"><i
+                        class="fab fa-whatsapp fa-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

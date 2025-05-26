@@ -1,10 +1,14 @@
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
     font-family: 'Inter', sans-serif;
     -webkit-tap-highlight-color: transparent; 
-    overflow-x: hidden; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
 }
 .hero-bg {
     background-image: url('https://i.ibb.co/gMR5QVFQ/IMG-20250521-WA0022.jpg'); 
